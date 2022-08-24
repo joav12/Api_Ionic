@@ -1,0 +1,7 @@
+{
+  "name": "ApiNoIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
