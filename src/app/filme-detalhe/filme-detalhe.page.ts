@@ -1,4 +1,3 @@
-/* eslint-disable prefer-const */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
@@ -16,10 +15,7 @@ export class FilmeDetalhePage implements OnInit {
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.http.get(`https://swapi.dev/api/films/${id}`).subscribe(res => {
-      this.film = res;
-    });
-
+    this.http.get(`https://swapi.dev/api/films/${id}`).subscribe(res => {this.film = res;})
   }
 
 }

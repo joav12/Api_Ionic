@@ -7,19 +7,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card ngIf="film">
-    <ion-card-header>
-      <ion-card-title>{{film.title}}</ion-card-title>
-    </ion-card-header>
+<ion-content>
 
+  <ion-card *ngIf="film">
+    <ion-card-header>
+      <ion-card-title>
+        {{film.title}}
+      </ion-card-title>
+    </ion-card-header>
     <ion-item>
       <ion-label>
-        Lançamento: {{film.release_date}}<br>
-        DIreção: {{film.director}}
+        Lançamento: {{film.release_date}}
+        Direção: {{film.director}}
       </ion-label>
     </ion-item>
-
     <ion-card-content>
       <strong>Sinopse:<br></strong>
       {{film.opening_crawl}}
