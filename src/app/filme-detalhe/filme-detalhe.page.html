@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="./filme-detalhe.page.scss">
+
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start" defaultHref="home">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -17,8 +19,9 @@
     </ion-card-header>
     <ion-item>
       <ion-label>
-        Lançamento: {{film.release_date}}
-        Direção: {{film.director}}
+        Lançamento: {{film.release_date}} <br>
+        Direção: {{film.director}} <br>
+        Episódio: {{film.episode_id}}
       </ion-label>
     </ion-item>
     <ion-card-content>

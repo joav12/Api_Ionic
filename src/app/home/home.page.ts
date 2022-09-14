@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
+import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomePage implements OnInit {
   constructor(private router: Router, private http: HttpClient, public toastControler: ToastController) { }
   
   ngOnInit() {
-    this.films = this.http.get('https://swapi.dev/api/films')
+    this.films = this.http.get('https://swapi.dev/api/films').pipe(catchError(erro => this.exibirErro(erro)))
   }
 
     async exibirErro(erro){

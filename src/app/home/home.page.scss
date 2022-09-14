@@ -1,4 +1,28 @@
+*{
+  --ion-background-color:#C8C8C8;
+  --ion-text-color:#FFE300;
+}
 
+ion-header {
+  ion-toolbar {
+    // set background color
+    --background: #000000;
+    // set icon/text color
+    --color: #ffffff;
+  }
+}
+
+ion-item{
+  text-align: center;
+  max-width: 240px;
+  border: solid 1px #1C1E22;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  --ion-item-background:#1C1E22;
+  color: #FFE300;
+}
 
 #container {
   text-align: center;

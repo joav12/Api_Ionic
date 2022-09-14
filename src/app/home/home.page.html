@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="./home.page.scss">
+
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>
       Star Wars Filmes
     </ion-title>
@@ -8,7 +10,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">{{film.title}}
+    <ion-item button detail lines="none" *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">{{film.title}}
 
     </ion-item>
   </ion-list>
